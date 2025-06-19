@@ -1,0 +1,194 @@
+body
+{
+    background: #f2d4a1;
+    background-image: url('bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header {
+    text-align: justify;
+    background-color: rgb(152, 223, 234);
+    justify-content: space-between;
+}
+
+menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+
+}
+
+menu ul li{
+    position: relative;
+}
+
+menu ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+}
+
+menu ul li:hover a{
+    color:rgb(250, 244, 255);
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #4d4c4c;
+    color: rgb(231, 224, 224);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    min-width: 150px;
+}
+
+.dropdown a{
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration:none ;
+    display: block;
+}
+
+.dropdown a:hover{
+    background-color: #9b9999;   
+}
+
+li:hover .dropdown{
+    display: block;
+}
+
+#gallery-name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    transform: translateX(-100%);
+    animation: rotate 6s linear infinite ;
+    box-shadow: #585931;
+    }
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#heading{
+    padding-top: 60px;
+    padding-left: 550px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-size: 30px;
+    text-decoration: underline;
+}
+#paragraph{
+    padding-top: 30px;
+    margin-left:500px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    width: 500px;
+    font-size: larger;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 2s forwards;
+    background-clip: content-box, border-box;
+    background-image: url(para-bg.jpg);}
+
+#paragraph.fancy-frame{
+    font-size: 24px;
+    color: rgb(135, 167, 153);
+    padding: 20px;
+    text-align: center;
+    position:relative;
+    border-radius: 20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+
+#paragraph.fancy-frame::before {
+    content: '';
+    position: absolute;
+    top:-15px;
+    left: -15px;
+    right:-15px;
+    bottom: -15px;
+    background:linear-gradient(black,black) linear-gradient(45drg, #ff6b81,#f8a5d8, #f6c8a1, #ffb3ba);
+    background-size:400% 400%;
+    border-radius: 25px;
+    z-index:-1;
+    animation: frameAnimation 5s linear infinite;
+}
+
+@keyframes frameAnimation{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 400% 400%;
+    }
+}
+
+@keyframes slideIn{
+    0%{
+        opacity: 0;
+        transform:translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.image{
+    padding-top: 200px;
+    margin: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    padding: 20px;
+}
+.image img{
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+}
+
+.image img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+#about p {
+    padding-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #efe4db;
+    
+}
+
+.logo {
+   display:flex;
+   align-items: center;
+   gap: 8px;
+}
+
+#about, #contact{
+    position: relative;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1)),
+    url('images-bgfold.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    color:#efe4db;
+    
+}

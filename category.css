@@ -1,0 +1,99 @@
+body{
+    background-color: antiquewhite;
+    background-image: url(catego.jpg);
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+
+.header{
+    text-align: justify;
+    background-color: rgba(236, 232, 157, 0.973);
+    justify-content: space-between;
+
+}
+
+menu ul{
+    margin: 1px;
+    padding: 1px;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+}
+
+menu ul li{
+    position: relative;
+}
+
+menu ul li a{
+    display:block;
+    padding: 10px 20px;
+    color: rgb(31,31,31);
+    text-decoration:none;
+}
+
+menu ul li:hover a{
+    color: rgb(250, 244, 255);
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left:0;
+    background-color: #4d4c4c;
+    color: rgb(231, 224, 224);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    min-width: 150px;
+}
+
+.dropdown a{
+    padding: 10px 20px;
+    color:rgb(255,255,255);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover{
+    background-color: #9b9999;
+}
+
+li:hover .dropdown{
+    display:block;
+}
+
+#gallery-name{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    transform:translate(-100%);
+    animation:rotate 6s linear infinite;
+    box-shadow: #585931;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.images{
+    padding-top: 200px;
+    margin:100px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    padding:20px;
+}
+.images img{
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    transition:transform 0.3s ease-in-out, opacity 0.3 ease-in-out;  
+}
+
+.images img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
